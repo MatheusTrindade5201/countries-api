@@ -1,0 +1,11 @@
+.cabecalho {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    box-shadow: 0 0 .5rem hsl(0, 0%, 52%);
+}
+
+.cabecalho__titulo, .cabecalho__tema-interruptor {
+    font-weight: 800;
+}
