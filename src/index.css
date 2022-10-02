@@ -65,7 +65,8 @@ table {
 
 
 body {
-  background-color: var(--cinza-claro);
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 14px;
+	color: var(--azul-extra-escuro-2);
+	background-color: var(--cinza-claro);
+	font-family: 'Nunito Sans', sans-serif;
+	font-size: 14px;
 }

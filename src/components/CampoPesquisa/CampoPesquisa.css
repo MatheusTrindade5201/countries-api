@@ -1,0 +1,19 @@
+.campoPesquisa {
+    background-image: url(/public/assets/imagens/magnifying-glass-solid.svg);
+    background-repeat: no-repeat;
+    background-size: 1.2rem;
+    background-position: 1.6rem;
+    border: none;
+    box-shadow: 0 0 .5rem hsl(0, 0%, 91%);
+    font-size: 1rem;
+    padding: 1rem 4rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+}
+
+.campoPesquisa::placeholder {
+    color: var(--cinza-escuro);
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+}
