@@ -1,0 +1,6 @@
+.filtro {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 4vw 3rem 4vw;
+    gap: 2.8rem;
+}

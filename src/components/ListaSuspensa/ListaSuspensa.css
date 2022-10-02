@@ -1,0 +1,17 @@
+.listaSuspensa {
+    -webkit-appearance: none;
+    background-image: url(/public/assets/imagens/chevron-down-solid.svg);
+    background-repeat: no-repeat;
+    background-size: .8rem;
+    background-position: 90%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 .5rem hsl(0, 0%, 91%);
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 1rem;
+    box-sizing: border-box;
+    width: 225px;
+    max-width: 500px;
+}
+

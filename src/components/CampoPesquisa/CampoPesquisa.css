@@ -4,6 +4,7 @@
     background-size: 1.2rem;
     background-position: 1.6rem;
     border: none;
+    border-radius: 5px;
     box-shadow: 0 0 .5rem hsl(0, 0%, 91%);
     font-size: 1rem;
     padding: 1rem 4rem;
