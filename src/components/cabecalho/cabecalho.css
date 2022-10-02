@@ -6,6 +6,23 @@
     box-shadow: 0 0 .5rem hsl(0, 0%, 52%);
 }
 
-.cabecalho__titulo, .cabecalho__tema-interruptor {
+.cabecalho__titulo {
     font-weight: 800;
+}
+
+.cabecalho__tema-interruptor {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.cabecalho__tema-icone {
+    background-image: url('/public/assets/imagens/moon-regular.svg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    margin-right: .5rem;
+    transform: rotate(-30deg);
 }
