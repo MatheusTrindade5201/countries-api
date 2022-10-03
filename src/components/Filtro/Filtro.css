@@ -4,3 +4,11 @@
     margin: 2rem 4vw 3rem 4vw;
     gap: 2.8rem;
 }
+
+@media screen and (min-width: 930px) {
+    .filtro {
+        margin: 3rem 5vw;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}

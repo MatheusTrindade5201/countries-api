@@ -26,3 +26,22 @@
     margin-right: .5rem;
     transform: rotate(-30deg);
 }
+
+@media screen and (min-width: 930px) {
+    .cabecalho {
+        padding: 2rem 5vw;
+    }
+
+    .cabecalho__titulo {
+        font-size: 1.5rem;
+    }
+
+    .cabecalho__tema-interruptor {
+        font-size: 1rem;
+    }
+
+    .cabecalho__tema-icone {
+        height: 20px;
+        width: 20px;
+    }
+}
