@@ -1,0 +1,35 @@
+.card{
+    box-shadow: 0 0 .5rem hsl(0, 0%, 52%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+.card__informacoes {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 1rem 2rem 1rem;
+}
+
+.card__titulo {
+    font-size: 1.3rem;
+    font-weight: 800;
+    padding-bottom: 1rem;
+}
+
+.card__info {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.card__info-destaque {
+    font-weight: 600;
+}
+
+
+
+
