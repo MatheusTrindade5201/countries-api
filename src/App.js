@@ -37,14 +37,16 @@ function App() {
       <div className="App">
         <Cabecalho/>
         <Filtro />
-        {paises.map(paises => <Card
-        key={paises.name.common}
-        imagem={paises.flags.png} 
-        nome={paises.name.common}
-        population={paises.population}
-        region={paises.region}
-        capital={paises.capital}
-         />)}
+        <div className="listaPaises">
+          {paises.map(paises => <Card
+            key={paises.name.common}
+            imagem={paises.flags.png} 
+            nome={paises.name.common}
+            population={paises.population}
+            region={paises.region}
+            capital={paises.capital}
+          />)}
+        </div>
         
       </div>
     );
