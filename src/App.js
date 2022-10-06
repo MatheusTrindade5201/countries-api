@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Cabecalho from "./components/Cabecalho";
+import Card from "./components/Card";
 import Filtro from "./components/Filtro";
 
 
@@ -23,7 +24,7 @@ function App() {
    ConsomeApi();
   }, [])
 
-  if(paises == false ){
+  if(paises === false ){
     return (
       <div className="App">
         <Cabecalho/>
@@ -36,6 +37,15 @@ function App() {
       <div className="App">
         <Cabecalho/>
         <Filtro />
+        {paises.map(paises => <Card
+        key={paises.name.common}
+        imagem={paises.flags.png} 
+        nome={paises.name.common}
+        population={paises.population}
+        region={paises.region}
+        capital={paises.capital}
+         />)}
+        
       </div>
     );
   }
