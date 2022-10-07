@@ -7,6 +7,7 @@
     max-width: 265px;
     overflow: hidden;
     margin: 0 0 2rem 0;
+    transition: .2s;
 }
 
 .bandeira {
@@ -37,11 +38,10 @@
 }
 
 @media screen and (min-width: 930px) {
-    /* .card {
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin: 0 5rem 5rem 0;
-    } */
+    .card:hover {
+        cursor: pointer;
+        transform: scale(105%);
+    }
 }
 
 
