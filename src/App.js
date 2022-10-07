@@ -1,11 +1,23 @@
 import { useEffect, useState } from "react";
 import Cabecalho from "./components/Cabecalho";
 import Card from "./components/Card";
-import Filtro from "./components/Filtro";
+import CampoPesquisa from './components/CampoPesquisa'
+import ListaSuspensa from './components/ListaSuspensa'
+
 
 
 
 function App() {
+
+  const continentes = [
+    'Africa',
+    'Americas',
+    'Asia',
+    'Europe',
+    'Oceania'
+  ]
+
+  const [regiao, setRegiao] = useState('Filter by Region') 
 
   const [paises, setPaises] = useState(false)
 
@@ -28,15 +40,60 @@ function App() {
     return (
       <div className="App">
         <Cabecalho/>
-        <Filtro />
-        <p>Carregando...</p>
+        <div className='filtro'>
+            <CampoPesquisa />
+            <ListaSuspensa 
+            placeholder={'Filter by Region'} 
+            item={continentes}
+            valor={regiao}
+            aoAlterado={valor => {setRegiao(valor)
+            console.log(valor);}}
+            />
+        </div>
+        <p>Loading...</p>
       </div>
     );
-  }else{
+  }else if(regiao !== 'Filter by Region'){
+    return(
+      <div className="App">
+        <Cabecalho/>
+        <div className='filtro'>
+            <CampoPesquisa />
+            <ListaSuspensa 
+            placeholder={'Filter by Region'} 
+            item={continentes}
+            valor={regiao}
+            aoAlterado={valor => {setRegiao(valor)
+            console.log(valor);}}
+            />
+        </div>
+        <div className="listaPaises">
+          {paises.filter(paises => paises.region === regiao).map(paises => <Card
+            key={paises.name.common}
+            imagem={paises.flags.png} 
+            nome={paises.name.common}
+            population={paises.population}
+            region={paises.region}
+            capital={paises.capital}
+          />)}
+        </div>
+      </div>
+    )
+  }
+  else{
     return (
       <div className="App">
         <Cabecalho/>
-        <Filtro />
+        <div className='filtro'>
+            <CampoPesquisa />
+            <ListaSuspensa 
+            placeholder={'Filter by Region'} 
+            item={continentes}
+            valor={regiao}
+            aoAlterado={valor => {setRegiao(valor)
+            console.log(valor);}}
+            />
+        </div>
         <div className="listaPaises">
           {paises.map(paises => <Card
             key={paises.name.common}
