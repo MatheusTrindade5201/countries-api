@@ -97,7 +97,7 @@ body {
 		margin: 0 5vw;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		gap: 4.9rem;
 	}
 	
 }
