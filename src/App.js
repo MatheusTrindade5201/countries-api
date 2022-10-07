@@ -71,7 +71,7 @@ function App() {
             />
         </div>
         <div className="listaPaises">
-          {paises.filter(paises => paises.region === regiao).map(paises => <Card
+          {paises.filter(paises => paises.region === regiao).filter(paises => paises.name.common.toLowerCase().includes(busca.toLowerCase())).map(paises => <Card
             key={paises.name.common}
             imagem={paises.flags.png} 
             nome={paises.name.common}
