@@ -1,8 +1,8 @@
 import './CampoPesquisa.css'
 
-const CampoPesquisa = () => {
+const CampoPesquisa = (props) => {
     return (
-        <input placeholder='Search for a country' className='campoPesquisa' />
+        <input placeholder='Search for a country' className='campoPesquisa' onChange={evento => props.aoAlterado(evento.target.value)} value={props.valor}/>
     )
 }
 

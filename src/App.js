@@ -20,6 +20,7 @@ function App() {
   const [regiao, setRegiao] = useState('Filter by Region') 
 
   const [paises, setPaises] = useState(false)
+  const [busca, setBusca] = useState('')
 
   const ConsomeApi = async () => {
     try {
@@ -41,13 +42,14 @@ function App() {
       <div className="App">
         <Cabecalho/>
         <div className='filtro'>
-            <CampoPesquisa />
+            <CampoPesquisa
+              valor={busca}
+              aoAlterado={valor => setBusca(valor)} />
             <ListaSuspensa 
             placeholder={'Filter by Region'} 
             item={continentes}
             valor={regiao}
-            aoAlterado={valor => {setRegiao(valor)
-            console.log(valor);}}
+            aoAlterado={valor => setRegiao(valor)}
             />
         </div>
         <p>Loading...</p>
@@ -58,13 +60,14 @@ function App() {
       <div className="App">
         <Cabecalho/>
         <div className='filtro'>
-            <CampoPesquisa />
+            <CampoPesquisa 
+              valor={busca}
+              aoAlterado={valor => setBusca(valor)}/>
             <ListaSuspensa 
             placeholder={'Filter by Region'} 
             item={continentes}
             valor={regiao}
-            aoAlterado={valor => {setRegiao(valor)
-            console.log(valor);}}
+            aoAlterado={valor => setRegiao(valor)}
             />
         </div>
         <div className="listaPaises">
@@ -81,21 +84,23 @@ function App() {
     )
   }
   else{
-    return (
+    if(busca.length > 0){
+      return (
       <div className="App">
         <Cabecalho/>
         <div className='filtro'>
-            <CampoPesquisa />
+            <CampoPesquisa 
+              valor={busca}
+              aoAlterado={valor => setBusca(valor)}/>
             <ListaSuspensa 
             placeholder={'Filter by Region'} 
             item={continentes}
             valor={regiao}
-            aoAlterado={valor => {setRegiao(valor)
-            console.log(valor);}}
+            aoAlterado={valor => setRegiao(valor)}
             />
         </div>
         <div className="listaPaises">
-          {paises.map(paises => <Card
+          {paises.filter(paises => paises.name.common.toLowerCase().includes(busca.toLowerCase())).map(paises => <Card
             key={paises.name.common}
             imagem={paises.flags.png} 
             nome={paises.name.common}
@@ -104,9 +109,38 @@ function App() {
             capital={paises.capital}
           />)}
         </div>
-        
       </div>
-    );
+      )
+    }else{
+      return (
+        <div className="App">
+          <Cabecalho/>
+          <div className='filtro'>
+              <CampoPesquisa 
+                valor={busca}
+                aoAlterado={valor => setBusca(valor)}/>
+              <ListaSuspensa 
+              placeholder={'Filter by Region'} 
+              item={continentes}
+              valor={regiao}
+              aoAlterado={valor => setRegiao(valor)}
+              />
+          </div>
+          <div className="listaPaises">
+            {paises.map(paises => <Card
+              key={paises.name.common}
+              imagem={paises.flags.png} 
+              nome={paises.name.common}
+              population={paises.population}
+              region={paises.region}
+              capital={paises.capital}
+            />)}
+          </div>
+          
+        </div>
+      );
+    }
+    
   }
 
   
