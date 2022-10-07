@@ -17,7 +17,7 @@ function App() {
     'Oceania'
   ]
 
-  const [regiao, setRegiao] = useState('Filter by Region') 
+  const [regiao, setRegiao] = useState('') 
 
   const [paises, setPaises] = useState(false)
   const [busca, setBusca] = useState('')
@@ -55,7 +55,7 @@ function App() {
         <p>Loading...</p>
       </div>
     );
-  }else if(regiao !== 'Filter by Region'){
+  }else {
     return(
       <div className="App">
         <Cabecalho/>
@@ -71,7 +71,7 @@ function App() {
             />
         </div>
         <div className="listaPaises">
-          {paises.filter(paises => paises.region === regiao).filter(paises => paises.name.common.toLowerCase().includes(busca.toLowerCase())).map(paises => <Card
+          {paises.filter(paises => paises.region.includes(regiao)).filter(paises => paises.name.common.toLowerCase().includes(busca.toLowerCase())).map(paises => <Card
             key={paises.name.common}
             imagem={paises.flags.png} 
             nome={paises.name.common}
@@ -83,67 +83,7 @@ function App() {
       </div>
     )
   }
-  else{
-    if(busca.length > 0){
-      return (
-      <div className="App">
-        <Cabecalho/>
-        <div className='filtro'>
-            <CampoPesquisa 
-              valor={busca}
-              aoAlterado={valor => setBusca(valor)}/>
-            <ListaSuspensa 
-            placeholder={'Filter by Region'} 
-            item={continentes}
-            valor={regiao}
-            aoAlterado={valor => setRegiao(valor)}
-            />
-        </div>
-        <div className="listaPaises">
-          {paises.filter(paises => paises.name.common.toLowerCase().includes(busca.toLowerCase())).map(paises => <Card
-            key={paises.name.common}
-            imagem={paises.flags.png} 
-            nome={paises.name.common}
-            population={paises.population}
-            region={paises.region}
-            capital={paises.capital}
-          />)}
-        </div>
-      </div>
-      )
-    }else{
-      return (
-        <div className="App">
-          <Cabecalho/>
-          <div className='filtro'>
-              <CampoPesquisa 
-                valor={busca}
-                aoAlterado={valor => setBusca(valor)}/>
-              <ListaSuspensa 
-              placeholder={'Filter by Region'} 
-              item={continentes}
-              valor={regiao}
-              aoAlterado={valor => setRegiao(valor)}
-              />
-          </div>
-          <div className="listaPaises">
-            {paises.map(paises => <Card
-              key={paises.name.common}
-              imagem={paises.flags.png} 
-              nome={paises.name.common}
-              population={paises.population}
-              region={paises.region}
-              capital={paises.capital}
-            />)}
-          </div>
-          
-        </div>
-      );
-    }
     
-  }
-
-  
 }
 
 export default App;
