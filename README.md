@@ -19,7 +19,9 @@ O usuário deve ser capaz de:
    
 
 ## Preview do produto final
+![Captura de tela 2022-10-08 084356](https://user-images.githubusercontent.com/104238483/194705836-ca1c6c92-33ef-4505-bd70-1ea66e12798f.png)
 
+![Captura de tela 2022-10-08 084324](https://user-images.githubusercontent.com/104238483/194705838-1fdfa19a-210f-4cab-adcd-350f6286a717.png)
 
 
 - Link do Site-solução: https://countries-api-9otx.vercel.app/pais/Spain
@@ -28,4 +30,12 @@ O usuário deve ser capaz de:
 
 Com essa atividade, consegui reforçar apectos das ferramentas abaixo:
 
+- Uso do React para desenvolvimento de aplicações WEB:
+    - useState
+    - useEffect
+    - useParams
+    - Routes
+- Mobile first
+- Cosumo de API
+    - Fetch
 
