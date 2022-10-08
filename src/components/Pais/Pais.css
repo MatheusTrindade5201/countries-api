@@ -1,0 +1,73 @@
+.pais__informacao {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pais__bandeira {
+    width: 100%;
+    max-width: 520px;
+    margin: 5rem 0 2rem 0;
+}
+
+.pais__nome {
+    font-size: 1.2rem;
+    font-weight: 800;
+    padding-bottom: 1rem;
+}
+
+.pais__info {
+    padding: .3rem 0;
+}
+
+.pais__descricao {
+    margin: 1rem 0;
+}
+
+.fronteira__item {
+    text-decoration: none;
+    padding: .2rem 2rem;
+    margin: 1rem .3rem 0 0;
+    background-color: var(--branco);
+    display: inline-block;
+    box-shadow: 0 0 .1rem hsl(0, 0%, 52%);
+}
+
+.pais__item {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+}
+
+@media screen  and (min-width: 930px){
+    .pais__informacao {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-areas: 
+        'bandeira descricao1 descricao2'
+        'bandeira fronteira fronteira';
+    }
+
+    .pais__bandeira {
+        margin: 0;
+        margin-right: 3rem;
+        width: 400px;
+        grid-area: bandeira;
+    }
+
+    .pais__descricao-1 {
+        grid-area: descricao1;
+    }
+
+    .pais__descricao-2 {
+        grid-area: descricao2;
+        align-self: center;
+    }
+
+    .pais__fronteiras {
+        grid-area: fronteira;
+    }
+
+
+    
+}

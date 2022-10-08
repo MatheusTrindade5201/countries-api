@@ -4,6 +4,7 @@ import Card from "../../components/Card";
 import CampoPesquisa from '../../components/CampoPesquisa'
 import ListaSuspensa from '../../components/ListaSuspensa'
 import React from "react";
+import './Home.css'
 
 
 

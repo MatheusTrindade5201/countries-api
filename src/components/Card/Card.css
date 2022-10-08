@@ -8,6 +8,8 @@
     overflow: hidden;
     margin: 0 0 2rem 0;
     transition: .2s;
+    text-decoration: none;
+    color: var(--azul-extra-escuro-2);
 }
 
 .bandeira {
