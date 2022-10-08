@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Cabecalho from "../../components/Cabecalho";
+import Cabecalho from "../../components/cabecalho";
 import Card from "../../components/Card";
 import CampoPesquisa from '../../components/CampoPesquisa'
 import ListaSuspensa from '../../components/ListaSuspensa'
