@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
-import Cabecalho from '../../components/Cabecalho'
+import Cabecalho from '../../components/cabecalho'
 import Pais from '../../components/Pais'
 import './Descricao.css'
 
