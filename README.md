@@ -39,3 +39,9 @@ Com essa atividade, consegui reforçar apectos das ferramentas abaixo:
 - Cosumo de API
     - Fetch
 
+## Instruão de clonagem:
+
+Caso você queira clocar este repositório e explorar ainda mais o código, baixe o mesmo na sua maquina e use o seguinte comando no termina:
+
+```npm install```
+
