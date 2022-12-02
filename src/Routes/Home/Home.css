@@ -1,7 +1,9 @@
 .listaPaises {
 	display: flex;
-	flex-direction: column;
 	align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4rem
 }
 
 .filtro {
@@ -23,8 +25,7 @@
 	.listaPaises{
 		margin: 0 5vw;
 		flex-direction: row;
-		flex-wrap: wrap;
-		column-gap: 4.9rem;
+        box-sizing: border-box;
 	}
 	
 }
