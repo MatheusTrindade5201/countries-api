@@ -6,6 +6,11 @@
     box-shadow: 0 0 .5rem hsl(0, 0%, 52%);
 }
 
+.dark{
+    background-color: var(--azul-extra-escuro);
+    color: #fff;
+}
+
 .cabecalho__titulo {
     font-weight: 800;
 }
@@ -14,7 +19,9 @@
     font-weight: 600;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
+
 
 .cabecalho__tema-icone {
     background-image: url('/public/assets/imagens/moon-regular.svg');
