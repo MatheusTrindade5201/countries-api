@@ -1,13 +1,15 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import Cabecalho from '../../components/cabecalho'
 import Pais from '../../components/Pais'
+import { MyContext } from '../../context/myContext'
 import './Descricao.css'
 
 const Descricao = (props) => {
 
     const {nome} = useParams()
     const [pais, setPaises] = useState(false);
+    const {theme} = useContext(MyContext)
 
     const ConsomeApi = async () => {
         try {
@@ -29,7 +31,7 @@ const Descricao = (props) => {
             <div className='info'>
                 <Cabecalho />
                 <div className='pais'>
-                <NavLink to={'/'} className='pais_voltar-botao'>Back</NavLink>
+                <NavLink to={'/'} className={'pais_voltar-botao ' + 'return'+theme}>Back</NavLink>
                 <p>Carregando...</p>
                 </div>
             </div>
@@ -39,7 +41,7 @@ const Descricao = (props) => {
             <div className='info'>
                 <Cabecalho />
                 <div className='pais'>
-                <NavLink to={'/'} className='pais_voltar-botao'>Back</NavLink>
+                <NavLink to={'/'} className={'pais_voltar-botao ' + 'return'+theme}>Back</NavLink>
                 <Pais 
                 key={pais[0].name}
                 imagem={pais[0].flags.svg} 

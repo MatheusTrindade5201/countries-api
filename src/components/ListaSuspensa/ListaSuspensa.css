@@ -15,3 +15,8 @@
     max-width: 500px;
 }
 
+.dark select {
+    background-color: var(--azul-escuro);
+    color: var(--branco);
+}
+

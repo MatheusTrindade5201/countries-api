@@ -1,9 +1,14 @@
+import { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+import { MyContext } from '../../context/myContext'
 import './Pais.css'
 
 const Pais = (props) => {
+
+const {theme} = useContext(MyContext)
+
     return (
-        <div className='pais__informacao'>
+        <div className={'pais__informacao ' + theme}>
                 <img src={props.imagem} className='pais__bandeira' alt='bandeira'></img>
                 <ul className='pais__descricao pais__descricao-1'>
                     <li className='pais__item'><h1 className='pais__nome'>{props.nome}</h1></li>

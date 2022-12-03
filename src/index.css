@@ -69,8 +69,11 @@ body {
 	background-color: var(--cinza-claro);
 	font-family: 'Nunito Sans', sans-serif;
 	font-size: 14px;
+	height: 100vh;
 }
 
 .pagedark{
 	background-color: var(--azul-extra-escuro);
+	color: var(--branco);
+	height: 100vh;
 }

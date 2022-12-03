@@ -39,6 +39,14 @@
     column-gap: .5rem;
 }
 
+.dark>.pais__fronteiras>.fronteira__item{
+    background-color: var(--azul-escuro);
+}
+
+.pais__informacao{
+    background-color: unset;
+}
+
 @media screen  and (min-width: 930px){
     .pais__informacao {
         margin-top: 4rem;
