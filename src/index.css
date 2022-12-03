@@ -50,8 +50,8 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
 
 :root {
-	--azul-escuro: #2b3945; /*Elementos do Dark-Mode*/
-	--azul-extra-escuro: #202c37; /*Background do Dark-Mode*/
+	--azul-escuro: #2B3743; /*Elementos do Dark-Mode*/
+	--azul-extra-escuro: #202D36; /*Background do Dark-Mode*/
 	--azul-extra-escuro-2: #111517; /*Cor do texto do Light-Mode*/
 	--cinza-escuro: #858585; /*Cor do Input texto Light-Mode*/
 	--cinza-claro: #fafafa; /*Background do Light-Mode*/
@@ -71,6 +71,6 @@ body {
 	font-size: 14px;
 }
 
-.dark{
+.pagedark{
 	background-color: var(--azul-extra-escuro);
 }
