@@ -7,9 +7,11 @@ function App() {
   const [theme, setTheme] = useState('')
 
   return (
+    <div className={"App " + theme}>
     <MyContextProvider value={{theme, setTheme}}>
     <Rotas />
     </MyContextProvider>
+    </div>
   )
 }
 
