@@ -7,7 +7,7 @@
 }
 
 .dark{
-    background-color: var(--azul-extra-escuro);
+    background-color: var(--azul-escuro);
     color: #fff;
 }
 
@@ -32,6 +32,11 @@
     width: 16px;
     margin-right: .5rem;
     transform: rotate(-30deg);
+}
+
+.dark>.cabecalho__tema-interruptor>.cabecalho__tema-icone{
+    background-image: url('/public/assets/imagens/moon-solid.svg');
+
 }
 
 @media screen and (min-width: 930px) {
