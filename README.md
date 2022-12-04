@@ -14,7 +14,7 @@ O usuário deve ser capaz de:
 - [x] Pesquisar por um pais usando o campo de input.
 - [x] Filtrar os paises pela região.
 - [x] Clicar no pais e ver informações mais detalhadas sobre ele.
-- [ ] Clicar nos paises que fazem borda e ver a página detalhada - (Em desenvolvimento)
+- [x] Clicar nos paises que fazem borda e ver a página detalhada.
 - [x] Trocar entre o tema claro e escuro. 
    
 
