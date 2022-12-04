@@ -29,7 +29,6 @@ function Home() {
         const data = await fetch('https://restcountries.com/v3.1/all');
         const json = await data.json()
         setPaises(json)
-        console.log(json);     
     } catch (error) {
         console.log(error.message);
     }
