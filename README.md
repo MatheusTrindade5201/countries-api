@@ -15,7 +15,7 @@ O usuário deve ser capaz de:
 - [x] Filtrar os paises pela região.
 - [x] Clicar no pais e ver informações mais detalhadas sobre ele.
 - [ ] Clicar nos paises que fazem borda e ver a página detalhada - (Em desenvolvimento)
-- [ ] Trocar entre o tema claro e escuro. (Em desenvolvimento)
+- [x] Trocar entre o tema claro e escuro. 
    
 
 ## Preview do produto final
