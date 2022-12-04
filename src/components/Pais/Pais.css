@@ -31,6 +31,7 @@
     background-color: var(--branco);
     display: inline-block;
     box-shadow: 0px 2px 5px 0px rgba(0,0,0,.4);
+    color: var(--azul-extra-escuro-2);
 }
 
 .pais__item {
@@ -41,6 +42,7 @@
 
 .dark>.pais__fronteiras>.fronteira__item{
     background-color: var(--azul-escuro);
+    color: var(--branco);
 }
 
 .pais__informacao{
